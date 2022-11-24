@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>&lt;flippable-card> Demo</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
+    <script type="module" src="../flippable-card.js"></script>
+    <style>
+      flippable-card {
+        width: 400px;
+        height: 225px;
+      }
+    </style>
+  </head>
+  <body>
+    <flippable-card>
+      <img
+        slot="front"
+        src="https://picsum.photos/800/450?1"
+        width="400"
+        height="225"
+        alt=""
+      />
+      <img
+        slot="back"
+        src="https://picsum.photos/800/450?grayscale&blur=8&1"
+        width="400"
+        height="225"
+        alt=""
+      />
+    </flippable-card>
+
+    <flippable-card revealed>
+      <img
+        slot="front"
+        src="https://picsum.photos/800/450?2"
+        width="400"
+        height="225"
+        alt=""
+      />
+      <img
+        slot="back"
+        src="https://picsum.photos/800/450?grayscale&blur=8&2"
+        width="400"
+        height="225"
+        alt=""
+      />
+    </flippable-card>
+  </body>
+</html>

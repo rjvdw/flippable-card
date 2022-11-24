@@ -1,0 +1,50 @@
+{
+  "name": "@rdcl/flippable-card",
+  "version": "0.1.2",
+  "description": "UI widget which simulates a card that can be flipped over.",
+  "main": "flippable-card.bundled.js",
+  "module": "flippable-card.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc && rollup -c",
+    "build:watch": "tsc --watch",
+    "clean": "rimraf my-element.{d.ts,d.ts.map,js,js.map} test/my-element.{d.ts,d.ts.map,js,js.map} test/my-element_test.{d.ts,d.ts.map,js,js.map}",
+    "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
+    "lint:eslint": "eslint 'src/**/*.ts'",
+    "lint:lit-analyzer": "lit-analyzer",
+    "format": "prettier \"**/*.{cjs,html,js,json,md,ts}\" --ignore-path ./.eslintignore --write",
+    "analyze": "cem analyze --litelement --globs \"src/**/*.ts\"",
+    "analyze:watch": "cem analyze --litelement --globs \"src/**/*.ts\" --watch",
+    "serve": "wds --watch",
+    "serve:prod": "MODE=prod npm run serve",
+    "checksize": "rollup -c ; cat my-element.bundled.js | gzip -9 | wc -c ; rm my-element.bundled.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rjvdw/flippable-card.git"
+  },
+  "author": "Ruud van der Weide <rj@rdcl.dev>",
+  "license": "ISC",
+  "dependencies": {
+    "lit": "^2.4.1"
+  },
+  "devDependencies": {
+    "@custom-elements-manifest/analyzer": "^0.6.6",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-replace": "^4.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.44.0",
+    "@typescript-eslint/parser": "^5.44.0",
+    "@web/dev-server": "^0.1.35",
+    "@web/dev-server-legacy": "^1.0.1",
+    "@webcomponents/webcomponentsjs": "^2.7.0",
+    "eslint": "^8.28.0",
+    "lit-analyzer": "^1.2.1",
+    "prettier": "^2.8.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.79.1",
+    "rollup-plugin-summary": "^1.4.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "typescript": "~4.7.4"
+  },
+  "customElements": "custom-elements.json"
+}

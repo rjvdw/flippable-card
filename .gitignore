@@ -1,0 +1,9 @@
+/node_modules/
+/lib/
+/test/
+custom-elements.json
+flippable-card.js
+flippable-card.js.map
+flippable-card.d.ts
+flippable-card.d.ts.map
+flippable-card.bundled.js

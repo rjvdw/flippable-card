@@ -1,0 +1,11 @@
+node_modules/*
+docs/*
+docs-src/*
+rollup-config.js
+custom-elements.json
+web-dev-server.config.js
+flippable-card.js
+flippable-card.js.map
+flippable-card.d.ts
+flippable-card.d.ts.map
+flippable-card.bundled.js
